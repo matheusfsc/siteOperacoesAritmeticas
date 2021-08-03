@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="tituloPag">Operações Aritméticas</h1>
+        <p>Operação de soma:</p>
+        <input type="number" name="soma1" id="soma1"> +
+        <input type="number" name="soma2" id="soma2">
+        <input type="button" value="Somar" onclick="somar()">
+        <div id='res'>Resultado</div>
+    </div>
+
+    <div class="container">
+        <p>Operação de subtração:</p>
+        <input type="number" name="sub1" id="sub1"> -
+        <input type="number" name="sub2" id="sub2">
+        <input type="button" value="Subtrair" onclick="subtrair()">
+        <div id='resSub'>Resultado</div>
+    </div>
+
+    <div class="container">
+        <p>Operação de multiplicação:</p>
+        <input type="number" name="multi1" id="multi1"> *
+        <input type="number" name="multi2" id="multi2">
+        <input type="button" value="Multiplicar" onclick="multiplicar()">
+        <div id='resMulti'>Resultado</div>
+    </div>
+
+    <div class="container">
+        <p>Operação de divisão:</p>
+        <input type="number" name="divi1" id="divi1"> /
+        <input type="number" name="divi2" id="divi2">
+        <input type="button" value="Dividir" onclick="dividir()">
+        <div id='resDivi'>Resultado</div>
+    </div>
+
+    <footer>
+        <p class="rodape">Criado por Matheus Felipe | </p>
+        <p class="rodape">Redes sociais: <a href="https://www.linkedin.com/in/matheus-felipe-2b8a90216/" target="_blank">LINKEDIN</a></p>
+        <p class="rodape"><a href="https://github.com/matheusfsc" target="_blank">GITHUB</a></p>
+    </footer>
+
+    <script>
+        function somar() {
+            var input1 = window.document.getElementById('soma1')
+            var input2 = window.document.getElementById('soma2')
+            var res = window.document.getElementById('res')
+            var number1 = Number(soma1.value)
+            var number2 = Number(soma2.value)
+            var inputTotal = number1 + number2
+
+            res.innerHTML = `O resultado de ${number1} + ${number2} é de <strong>${inputTotal}</strong>`
+        }
+
+        function subtrair() {
+            var input1 = window.document.getElementById('sub1')
+            var input2 = window.document.getElementById('sub2')
+            var res = window.document.getElementById('res')
+            var number1 = Number(sub1.value)
+            var number2 = Number(sub2.value)
+            var inputTotal = number1 - number2
+
+            resSub.innerHTML = `O resultado de ${number1} - ${number2} é de <strong>${inputTotal}</strong>`
+        }
+
+        function multiplicar() {
+            var input1 = window.document.getElementById('multi1')
+            var input2 = window.document.getElementById('multi2')
+            var res = window.document.getElementById('resMulti')
+            var number1 = Number(multi1.value)
+            var number2 = Number(multi2.value)
+            var inputTotal = number1 * number2
+
+            resMulti.innerHTML = `O resultado de ${number1} * ${number2} é de <strong>${inputTotal}</strong>`
+        }
+
+        function dividir() {
+            var input1 = window.document.getElementById('divi1')
+            var input2 = window.document.getElementById('divi2')
+            var res = window.document.getElementById('resDivi')
+            var number1 = Number(divi1.value)
+            var number2 = Number(divi2.value)
+            var inputTotal = number1 / number2
+
+            resDivi.innerHTML = `O resultado de ${number1} / ${number2} é de <strong>${inputTotal}</strong>`
+        }
+
+    </script>
+
+
+</body>
+
+</html>
